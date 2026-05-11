@@ -4,7 +4,6 @@ const lb = document.getElementById('lb');
 const lbCap = document.getElementById('lbCap');
 let currentIdx = 0;
 
-// Filter Logic
 tabs.forEach(tab => {
   tab.addEventListener('click', () => {
     tabs.forEach(t => t.classList.remove('active'));
@@ -33,7 +32,6 @@ function showCard(idx, vis) {
   currentIdx = idx;
 }
 
-// Open Lightbox
 cards.forEach(card => {
   card.addEventListener('click', () => {
     const vis = visibleCards();
@@ -43,7 +41,6 @@ cards.forEach(card => {
   });
 });
 
-// Controls
 document.getElementById('lbClose').addEventListener('click', () => lb.classList.remove('open'));
 
 lb.addEventListener('click', (e) => {
@@ -62,7 +59,6 @@ document.getElementById('lbNext').addEventListener('click', () => {
   showCard(currentIdx, vis);
 });
 
-// Keyboard Navigation
 document.addEventListener('keydown', (e) => {
   if (!lb.classList.contains('open')) return;
   if (e.key === 'Escape') lb.classList.remove('open');
@@ -70,7 +66,6 @@ document.addEventListener('keydown', (e) => {
   if (e.key === 'ArrowRight') document.getElementById('lbNext').click();
 });
 
-// URL Parameter filter
 const params = new URLSearchParams(window.location.search);
 const catParam = params.get('cat');
 if (catParam) {
