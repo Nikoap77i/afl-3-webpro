@@ -8,7 +8,6 @@
 
 body{font-family:'Inter',sans-serif;color:#1a1a1a;background:#fff;}
 
-/* ---- NAV ---- */
 nav{background:var(--navy-dk);height:48px;display:flex;align-items:center;justify-content:space-between;padding:0 40px;position:sticky;top:0;z-index:200;}
 .nav-logo{display:flex;align-items:center;text-decoration:none;}
 .nav-logo img{height:100px;width:auto;display:block;}
@@ -21,12 +20,10 @@ nav{background:var(--navy-dk);height:48px;display:flex;align-items:center;justif
 .mob-menu.open{display:block;}
 .mob-menu a{display:block;color:rgba(255,255,255,.88);text-decoration:none;font-size:14px;padding:11px 24px;border-bottom:1px solid rgba(255,255,255,.09);}
 
-/* ---- GENERIC SECTION ---- */
 .sec{padding:52px 80px;}
 h2.stitle{font-size:26px;font-weight:700;margin-bottom:18px;text-align:center;}
 .sbody{font-size:14px;color:#555;line-height:1.75;}
 
-/* ---- FOOTER ---- */
 footer{background:var(--footer-bg);padding:40px 80px 22px;}
 .fcols{display:grid;grid-template-columns:1.5fr 1fr 1fr;gap:40px;margin-bottom:28px;}
 .fbrand p{font-size:12px;color:var(--footer-text);line-height:1.7;}
@@ -40,11 +37,6 @@ footer{background:var(--footer-bg);padding:40px 80px 22px;}
 .f-social a:hover{color:#fff;}
 .fbot{border-top:1px solid rgba(255,255,255,.15);padding-top:16px;text-align:center;font-size:11.5px;color:var(--footer-text);}
 
-/* ==============================
-   INDEX.HTML — SPECIFIC STYLES
-   ============================== */
-
-/* Hero */
 .hero{background:var(--hero-bg);padding:60px 80px;display:flex;align-items:center;justify-content:space-between;gap:40px;}
 .hero-text h1{font-size:44px;font-weight:800;line-height:1.08;margin-bottom:16px;}
 .hero-text p{font-size:14px;color:#444;line-height:1.7;max-width:310px;margin-bottom:26px;}
@@ -54,11 +46,9 @@ footer{background:var(--footer-bg);padding:40px 80px 22px;}
 .hero-avatar img{width:100%;height:100%;object-fit:cover;}
 .avatar-ph{width:100%;height:100%;background:linear-gradient(135deg,#6aabb8,#2c5f7a);display:flex;align-items:center;justify-content:center;font-size:70px;}
 
-/* About */
 .about{background:#fff;}
 .about .sbody{max-width:680px;margin:0 auto;}
 
-/* What Defines Me */
 .defines{background:#fff;border-top:1px solid #eee;}
 .traits{display:flex;justify-content:center;gap:44px;flex-wrap:wrap;margin-top:8px;}
 .trait{width:150px;}
@@ -67,7 +57,6 @@ footer{background:var(--footer-bg);padding:40px 80px 22px;}
 .t-name{font-size:13.5px;font-weight:700;margin-bottom:7px;}
 .t-desc{font-size:12.5px;color:#666;line-height:1.65;}
 
-/* Passions */
 .passions{background:#fff;border-top:1px solid #eee;}
 .passions-inner{display:flex;gap:36px;align-items:flex-start;}
 .p-img{flex-shrink:0;width:210px;height:210px;border-radius:10px;overflow:hidden;background:#b8ccb0;}
@@ -75,12 +64,10 @@ footer{background:var(--footer-bg);padding:40px 80px 22px;}
 .p-img-ph{width:100%;height:100%;background:linear-gradient(135deg,#7aab6e,#3d6b35);display:flex;align-items:center;justify-content:center;font-size:54px;}
 .passions-text h2{font-size:24px;font-weight:700;margin-bottom:16px;line-height:1.2;}
 
-/* Quote */
 .quote{background:#1a1a1a;padding:48px 80px;}
 .quote blockquote{font-size:18px;font-style:italic;color:#fff;line-height:1.65;max-width:720px;}
 .quote cite{display:block;margin-top:14px;font-size:13px;color:#999;font-style:normal;}
 
-/* Connect */
 .connect{background:#fff;text-align:center;}
 .connect .sbody{max-width:500px;margin:0 auto 28px;}
 .cbtns{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;}
@@ -89,16 +76,10 @@ footer{background:var(--footer-bg);padding:40px 80px 22px;}
 .btn-i:hover{background:var(--navy-dk);}
 .btn-g:hover{border-color:var(--navy);color:var(--navy);}
 
-/* ==============================
-   MY-STORY.HTML — SPECIFIC STYLES
-   ============================== */
-
-/* Page Header */
 .page-hdr{background:var(--hero-bg);padding:48px 80px 40px;}
 .page-hdr h1{font-size:40px;font-weight:800;margin-bottom:10px;}
 .page-hdr p{font-size:14px;color:#555;}
 
-/* Enjoy Doing */
 .enjoy{background:#fff;}
 .enjoy-inner{display:flex;gap:44px;align-items:flex-start;}
 .enjoy-img{flex-shrink:0;width:220px;border-radius:10px;overflow:hidden;background:#c8d4dc;}
@@ -106,11 +87,9 @@ footer{background:var(--footer-bg);padding:40px 80px 22px;}
 .enjoy-img-ph{height:280px;background:linear-gradient(160deg,#8ab0c4,#2c5f7a);display:flex;align-items:center;justify-content:center;font-size:70px;}
 .enjoy-text h2{font-size:22px;font-weight:700;margin-bottom:14px;}
 
-/* Inline Quote */
 .inline-quote{background:var(--hero-bg);margin:0 80px;border-radius:10px;padding:26px 36px;}
 .inline-quote p{font-size:15px;font-style:italic;color:#333;line-height:1.6;}
 
-/* Interests */
 .interests{background:#fff;}
 .interests h2{font-size:22px;font-weight:700;margin-bottom:8px;}
 .interests .lead{font-size:14px;color:#555;line-height:1.75;margin-bottom:36px;max-width:640px;}
@@ -124,7 +103,6 @@ footer{background:var(--footer-bg);padding:40px 80px 22px;}
 .ph-places{background:linear-gradient(135deg,#6a9abf,#1e4060);}
 .ii-text h3{font-size:16px;font-weight:700;margin-bottom:10px;}
 
-/* Fun Facts */
 .funfacts{background:#f9f9f9;}
 .funfacts h2{font-size:22px;font-weight:700;margin-bottom:20px;}
 .facts-list{list-style:none;}
@@ -133,23 +111,15 @@ footer{background:var(--footer-bg);padding:40px 80px 22px;}
 .fdot{flex-shrink:0;width:7px;height:7px;border-radius:50%;background:var(--navy);margin-top:6px;}
 .thanks{margin-top:28px;font-size:14px;color:#555;line-height:1.75;font-style:italic;text-align:center;}
 
-/* ==============================
-   GALLERY.HTML — SPECIFIC STYLES
-   ============================== */
 .card.show{display:block;animation:popIn .25s ease both;}
 @keyframes popIn{from{opacity:0;transform:scale(.95);}to{opacity:1;transform:scale(1);}}
 .tab.active{background-color:#2c5f7a;color:white;border-color:#2c5f7a;}
 
-/* ==============================
-   RESPONSIVE
-   ============================== */
 @media(max-width:768px){
-  /* Nav */
   .ham{display:flex;}
   .nav-links{display:none;}
   nav{padding:0 20px;}
 
-  /* Index */
   .hero{padding:36px 20px;flex-direction:column;align-items:center;text-align:center;}
   .hero-text h1{font-size:30px;}
   .hero-text p{max-width:100%;margin:0 auto 24px;}
@@ -162,7 +132,6 @@ footer{background:var(--footer-bg);padding:40px 80px 22px;}
   .quote{padding:36px 20px;}
   .quote blockquote{font-size:15px;}
 
-  /* My Story */
   .page-hdr{padding:36px 20px 28px;}
   .page-hdr h1{font-size:28px;}
   .enjoy-inner{flex-direction:column;}
@@ -172,7 +141,6 @@ footer{background:var(--footer-bg);padding:40px 80px 22px;}
   .interest-item{flex-direction:column;}
   .ii-img{width:100%;height:180px;}
 
-  /* Footer */
   footer{padding:32px 20px 18px;}
   .fcols{grid-template-columns:1fr;gap:22px;}
 }
