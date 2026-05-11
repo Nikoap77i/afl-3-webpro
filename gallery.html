@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Gallery — Niko Adrian Purnomo</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="styles.css"/>
+</head>
+<body class="text-[#1a1a1a] bg-white">
+
+<nav class="bg-[#1e4a61] h-[48px] flex items-center justify-between px-5 md:px-[40px] sticky top-0 z-[200]">
+  <a href="index.html" class="flex items-center no-underline">
+    <img src="images/logo.png" alt="Niko Logo" class="h-[100px] w-auto block">
+  </a>
+  <ul class="hidden md:flex gap-[28px] list-none p-0 m-0">
+    <li><a href="index.html" class="text-white/90 no-underline text-[13px] font-[500] hover:text-white">Home</a></li>
+    <li><a href="my-story.html" class="text-white/90 no-underline text-[13px] font-[500] hover:text-white">My Story</a></li>
+    <li><a href="gallery.html" class="text-white no-underline text-[13px] font-[700]">Gallery</a></li>
+  </ul>
+  <button class="md:hidden flex flex-col gap-[5px] cursor-pointer bg-transparent border-none p-1" id="ham">
+    <span class="block w-[22px] h-[2px] bg-white rounded-[2px]"></span>
+    <span class="block w-[22px] h-[2px] bg-white rounded-[2px]"></span>
+    <span class="block w-[22px] h-[2px] bg-white rounded-[2px]"></span>
+  </button>
+</nav>
+
+<div class="hidden bg-[#1e4a61] w-full" id="mobMenu">
+  <a href="index.html" class="block text-white/88 no-underline text-[14px] py-[11px] px-6 border-b border-white/10">Home</a>
+  <a href="my-story.html" class="block text-white/88 no-underline text-[14px] py-[11px] px-6 border-b border-white/10">My Story</a>
+  <a href="gallery.html" class="block text-white/88 no-underline text-[14px] py-[11px] px-6 border-b border-white/10">Gallery</a>
+</div>
+
+<header class="bg-[#d6e8f0] px-5 py-12 md:px-20 md:py-12">
+  <h1 class="text-[28px] md:text-[40px] font-[800] mb-[10px]">Moments of My Life</h1>
+  <p class="text-[14px] text-[#555]">A collection of memories, experiences, and the little things that make life beautiful</p>
+</header>
+
+<div class="px-5 py-9 md:px-20 md:py-9 pb-[60px]">
+  <div class="flex gap-2 mb-8 flex-wrap">
+    <button class="tab active px-5 py-[7px] rounded-full border-[1.5px] border-[#ccc] bg-white text-[#555] text-[13px] font-[600] cursor-pointer hover:border-[#2c5f7a] transition-all" data-cat="myself">Myself</button>
+    <button class="tab px-5 py-[7px] rounded-full border-[1.5px] border-[#ccc] bg-white text-[#555] text-[13px] font-[600] cursor-pointer hover:border-[#2c5f7a] transition-all" data-cat="friends">Friends</button>
+    <button class="tab px-5 py-[7px] rounded-full border-[1.5px] border-[#ccc] bg-white text-[#555] text-[13px] font-[600] cursor-pointer hover:border-[#2c5f7a] transition-all" data-cat="school">School</button>
+    <button class="tab px-5 py-[7px] rounded-full border-[1.5px] border-[#ccc] bg-white text-[#555] text-[13px] font-[600] cursor-pointer hover:border-[#2c5f7a] transition-all" data-cat="random">Random</button>
+    <button class="tab px-5 py-[7px] rounded-full border-[1.5px] border-[#ccc] bg-white text-[#555] text-[13px] font-[600] cursor-pointer hover:border-[#2c5f7a] transition-all" data-cat="mycat">My Cat</button>
+  </div>
+
+  <div class="grid grid-cols-2 md:grid-cols-4 gap-[10px]" id="grid">
+    <div class="card show relative cursor-pointer aspect-square bg-[#9aadbb] rounded-lg overflow-hidden group" data-cat="myself" data-caption="At a local cafe">
+      <img src="images\myself\me drinking coffee.jpg" alt="At a local cafe" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110">
+      <div class="absolute inset-0 bg-[#1a2f4a]/65 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity p-2 text-center text-white text-[12px] font-semibold">At a local cafe</div>
+      <div class="absolute bottom-0 w-full p-2 bg-black/20 text-white text-[11px] backdrop-blur-sm">At a local cafe</div>
+    </div>
+
+    <div class="card show relative cursor-pointer aspect-square bg-[#9aadbb] rounded-lg overflow-hidden group" data-cat="myself" data-caption="Celebrating Hero's day">
+      <img src="images\myself\IMG_4973.jpg" alt="Celebrating Hero's day" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110">
+      <div class="absolute inset-0 bg-[#1a2f4a]/65 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity p-2 text-center text-white text-[12px] font-semibold">Celebrating Hero's day</div>
+      <div class="absolute bottom-0 w-full p-2 bg-black/20 text-white text-[11px] backdrop-blur-sm">Celebrating Hero's day</div>
+    </div>
+
+    <div class="card show relative cursor-pointer aspect-square bg-[#9aadbb] rounded-lg overflow-hidden group" data-cat="myself" data-caption="A pic my girlfriend took of me">
+      <img src="images\myself\IMG-20260115-WA0151.jpg" alt="A pic my girlfriend took of me" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110">
+      <div class="absolute inset-0 bg-[#1a2f4a]/65 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity p-2 text-center text-white text-[12px] font-semibold">A pic my girlfriend took of me</div>
+      <div class="absolute bottom-0 w-full p-2 bg-black/20 text-white text-[11px] backdrop-blur-sm">A pic my girlfriend took of me</div>
+    </div>
+
+    <div class="card show relative cursor-pointer aspect-square bg-[#9aadbb] rounded-lg overflow-hidden group" data-cat="myself" data-caption="Celebrating Christmas with my girlfriend">
+      <img src="images\myself\IMG-20251221-WA0162.jpg" alt="Celebrating Christmas with my girlfriend" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110">
+      <div class="absolute inset-0 bg-[#1a2f4a]/65 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity p-2 text-center text-white text-[12px] font-semibold">Celebrating Christmas with my girlfriend</div>
+      <div class="absolute bottom-0 w-full p-2 bg-black/20 text-white text-[11px] backdrop-blur-sm">Celebrating Christmas with my girlfriend</div>
+    </div>
+
+    <div class="card show relative cursor-pointer aspect-square bg-[#9aadbb] rounded-lg overflow-hidden group" data-cat="myself" data-caption="Committee">
+      <img src="images\myself\IMG-20251205-WA0047.jpeg" alt="Committee" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110">
+      <div class="absolute inset-0 bg-[#1a2f4a]/65 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity p-2 text-center text-white text-[12px] font-semibold">Committee</div>
+      <div class="absolute bottom-0 w-full p-2 bg-black/20 text-white text-[11px] backdrop-blur-sm">Committee</div>
+    </div>
+
+    <div class="card show relative cursor-pointer aspect-square bg-[#9aadbb] rounded-lg overflow-hidden group" data-cat="myself" data-caption="Random pic of me with a filter on">
+      <img src="images\myself\IMG-20240713-WA0020.jpg" alt="Random pic of me with a filter on" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110">
+      <div class="absolute inset-0 bg-[#1a2f4a]/65 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity p-2 text-center text-white text-[12px] font-semibold">Random pic of me with a filter on</div>
+      <div class="absolute bottom-0 w-full p-2 bg-black/20 text-white text-[11px] backdrop-blur-sm">Random pic of me with a filter on</div>
+    </div>
+
+    <div class="card show relative cursor-pointer aspect-square bg-[#9aadbb] rounded-lg overflow-hidden group" data-cat="myself" data-caption="Me as a child in kindergarden">
+      <img src="images\myself\IMG-20231210-WA0021.jpg" alt="Me as a child in kindergarden" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110">
+      <div class="absolute inset-0 bg-[#1a2f4a]/65 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity p-2 text-center text-white text-[12px] font-semibold">Me as a child in kindergarden</div>
+      <div class="absolute bottom-0 w-full p-2 bg-black/20 text-white text-[11px] backdrop-blur-sm">Me as a child in kindergarden</div>
+    </div>
+
+    <div class="card show relative cursor-pointer aspect-square bg-[#9aadbb] rounded-lg overflow-hidden group" data-cat="myself" data-caption="My graduation picture">
+      <img src="images\myself\ALZ06013.jpg" alt="My graduation picture" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110">
+      <div class="absolute inset-0 bg-[#1a2f4a]/65 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity p-2 text-center text-white text-[12px] font-semibold">My graduation picture</div>
+      <div class="absolute bottom-0 w-full p-2 bg-black/20 text-white text-[11px] backdrop-blur-sm">My graduation picture</div>
+    </div>
+
+    <div class="card hidden relative cursor-pointer aspect-square bg-[#9aadbb] rounded-lg overflow-hidden group" data-cat="friends" data-caption="Eating bakso after class with Darren">
+      <img src="images\friends\IMG-20251029-WA0046.jpeg" alt="Eating bakso after class with Darren" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110">
+      <div class="absolute inset-0 bg-[#1a2f4a]/65 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity p-2 text-center text-white text-[12px] font-semibold">Eating bakso after class with Darren</div>
+      <div class="absolute bottom-0 w-full p-2 bg-black/20 text-white text-[11px] backdrop-blur-sm">Eating bakso after class with Darren</div>
+    </div>
+
+    <div class="card hidden relative cursor-pointer aspect-square bg-[#9aadbb] rounded-lg overflow-hidden group" data-cat="friends" data-caption="With my friends in Bali">
+      <img src="images\friends\IMG-20250510-WA0012.jpg" alt="With my friends in Bali" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110">
+      <div class="absolute inset-0 bg-[#1a2f4a]/65 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity p-2 text-center text-white text-[12px] font-semibold">With my friends in Bali</div>
+      <div class="absolute bottom-0 w-full p-2 bg-black/20 text-white text-[11px] backdrop-blur-sm">With my friends in Bali</div>
+    </div>
+
+    <div class="card hidden relative cursor-pointer aspect-square bg-[#9aadbb] rounded-lg overflow-hidden group" data-cat="friends" data-caption="My group graduation picture">
+      <img src="images\friends\DSC09351.jpg" alt="My group graduation picture" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110">
+      <div class="absolute inset-0 bg-[#1a2f4a]/65 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity p-2 text-center text-white text-[12px] font-semibold">My group graduation picture</div>
+      <div class="absolute bottom-0 w-full p-2 bg-black/20 text-white text-[11px] backdrop-blur-sm">My group graduation picture</div>
+    </div>
+
+    <div class="card hidden relative cursor-pointer aspect-square bg-[#9aadbb] rounded-lg overflow-hidden group" data-cat="friends" data-caption="Eating together">
+      <img src="images\friends\IMG-20250630-WA0010.jpg" alt="Eating together" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110">
+      <div class="absolute inset-0 bg-[#1a2f4a]/65 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity p-2 text-center text-white text-[12px] font-semibold">Eating together</div>
+      <div class="absolute bottom-0 w-full p-2 bg-black/20 text-white text-[11px] backdrop-blur-sm">Eating together</div>
+    </div>
+
+    <div class="card hidden relative cursor-pointer aspect-square bg-[#9aadbb] rounded-lg overflow-hidden group" data-cat="friends" data-caption="Group picture in Bali">
+      <img src="images\friends\IMG-20250508-WA0027.jpg" alt="Group picture in Bali" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110">
+      <div class="absolute inset-0 bg-[#1a2f4a]/65 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity p-2 text-center text-white text-[12px] font-semibold">Group picture in Bali</div>
+      <div class="absolute bottom-0 w-full p-2 bg-black/20 text-white text-[11px] backdrop-blur-sm">Group picture in Bali</div>
+    </div>
+
+    <div class="card hidden relative cursor-pointer aspect-square bg-[#9aadbb] rounded-lg overflow-hidden group" data-cat="friends" data-caption="Religious camp picture">
+      <img src="images\friends\IMG-20250214-WA0006.jpg" alt="Religious camp picture" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110">
+      <div class="absolute inset-0 bg-[#1a2f4a]/65 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity p-2 text-center text-white text-[12px] font-semibold">Religious camp picture</div>
+      <div class="absolute bottom-0 w-full p-2 bg-black/20 text-white text-[11px] backdrop-blur-sm">Religious camp picture</div>
+    </div>
+
+    <div class="card hidden relative cursor-pointer aspect-square bg-[#9aadbb] rounded-lg overflow-hidden group" data-cat="friends" data-caption="Random selfie pic">
+      <img src="images\friends\IMG-20251128-WA0014.jpg" alt="Random selfie pic" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110">
+      <div class="absolute inset-0 bg-[#1a2f4a]/65 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity p-2 text-center text-white text-[12px] font-semibold">Random selfie pic</div>
+      <div class="absolute bottom-0 w-full p-2 bg-black/20 text-white text-[11px] backdrop-blur-sm">Random selfie pic</div>
+    </div>
+
+    <div class="card hidden relative cursor-pointer aspect-square bg-[#9aadbb] rounded-lg overflow-hidden group" data-cat="friends" data-caption="BCA RUN Committee">
+      <img src="images\friends\IMG-20251205-WA0061.jpg" alt="BCA RUN Committee" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110">
+      <div class="absolute inset-0 bg-[#1a2f4a]/65 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity p-2 text-center text-white text-[12px] font-semibold">BCA RUN Committee</div>
+      <div class="absolute bottom-0 w-full p-2 bg-black/20 text-white text-[11px] backdrop-blur-sm">BCA RUN Committee</div>
+    </div>
+
+    <div class="card hidden relative cursor-pointer aspect-square bg-[#9aadbb] rounded-lg overflow-hidden group" data-cat="school" data-caption="Dean's cup 3rd place valorant">
+      <img src="images\school\IMG-20250925-WA0062.jpg" alt="Dean's cup 3rd place valorant" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110">
+      <div class="absolute inset-0 bg-[#1a2f4a]/65 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity p-2 text-center text-white text-[12px] font-semibold">Dean's cup 3rd place valorant</div>
+      <div class="absolute bottom-0 w-full p-2 bg-black/20 text-white text-[11px] backdrop-blur-sm">Dean's cup 3rd place valorant</div>
+    </div>
+
+    <div class="card hidden relative cursor-pointer aspect-square bg-[#9aadbb] rounded-lg overflow-hidden group" data-cat="school" data-caption="Selling food as a school assignment">
+      <img src="images\school\IMG_20241027_204458_387.webp" alt="Selling food as a school assignment" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110">
+      <div class="absolute inset-0 bg-[#1a2f4a]/65 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity p-2 text-center text-white text-[12px] font-semibold">Selling food as a school assignment</div>
+      <div class="absolute bottom-0 w-full p-2 bg-black/20 text-white text-[11px] backdrop-blur-sm">Selling food as a school assignment</div>
+    </div>
+
+    <div class="card hidden relative cursor-pointer aspect-square bg-[#9aadbb] rounded-lg overflow-hidden group" data-cat="school" data-caption="Class picture">
+      <img src="images\school\IMG-20240731-WA0007.jpg" alt="Class picture" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110">
+      <div class="absolute inset-0 bg-[#1a2f4a]/65 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity p-2 text-center text-white text-[12px] font-semibold">Class picture</div>
+      <div class="absolute bottom-0 w-full p-2 bg-black/20 text-white text-[11px] backdrop-blur-sm">Class picture</div>
+    </div>
+
+    <div class="card hidden relative cursor-pointer aspect-square bg-[#9aadbb] rounded-lg overflow-hidden group" data-cat="school" data-caption="O Week">
+      <img src="images\school\IMG-20250817-WA0004.jpg" alt="O Week" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110">
+      <div class="absolute inset-0 bg-[#1a2f4a]/65 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity p-2 text-center text-white text-[12px] font-semibold">O Week</div>
+      <div class="absolute bottom-0 w-full p-2 bg-black/20 text-white text-[11px] backdrop-blur-sm">O Week</div>
+    </div>
+
+    <div class="card hidden relative cursor-pointer aspect-square bg-[#9aadbb] rounded-lg overflow-hidden group" data-cat="school" data-caption="Random pic after a ceremony">
+      <img src="images\school\IMG-20240917-WA0038.jpg" alt="Random pic after a ceremony" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110">
+      <div class="absolute inset-0 bg-[#1a2f4a]/65 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity p-2 text-center text-white text-[12px] font-semibold">Random pic after a ceremony</div>
+      <div class="absolute bottom-0 w-full p-2 bg-black/20 text-white text-[11px] backdrop-blur-sm">Random pic after a ceremony</div>
+    </div>
+
+    <div class="card hidden relative cursor-pointer aspect-square bg-[#9aadbb] rounded-lg overflow-hidden group" data-cat="school" data-caption="in Bromo">
+      <img src="images\school\IMG-20240303-WA0060.jpg" alt="in Bromo" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110">
+      <div class="absolute inset-0 bg-[#1a2f4a]/65 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity p-2 text-center text-white text-[12px] font-semibold">in Bromo</div>
+      <div class="absolute bottom-0 w-full p-2 bg-black/20 text-white text-[11px] backdrop-blur-sm"> in Bromo</div>
+    </div>
+
+    <div class="card hidden relative cursor-pointer aspect-square bg-[#9aadbb] rounded-lg overflow-hidden group" data-cat="school" data-caption="Studying together">
+      <img src="images\school\IMG-20260227-WA0006.jpg" alt="Studying together" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110">
+      <div class="absolute inset-0 bg-[#1a2f4a]/65 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity p-2 text-center text-white text-[12px] font-semibold">Studying together</div>
+      <div class="absolute bottom-0 w-full p-2 bg-black/20 text-white text-[11px] backdrop-blur-sm">Studying together</div>
+    </div>
+
+    <div class="card hidden relative cursor-pointer aspect-square bg-[#9aadbb] rounded-lg overflow-hidden group" data-cat="school" data-caption="Group project">
+      <img src="images\school\IMG-20260106-WA0025.jpg" alt="Group project" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110">
+      <div class="absolute inset-0 bg-[#1a2f4a]/65 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity p-2 text-center text-white text-[12px] font-semibold">Group project</div>
+      <div class="absolute bottom-0 w-full p-2 bg-black/20 text-white text-[11px] backdrop-blur-sm">Group project</div>
+    </div>
+
+    <div class="card hidden relative cursor-pointer aspect-square bg-[#9aadbb] rounded-lg overflow-hidden group" data-cat="random" data-caption="Drinking coffee while working">
+      <img src="images\random\IMG-20260103-WA0005.jpeg" alt="Drinking coffee while working" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110">
+      <div class="absolute inset-0 bg-[#1a2f4a]/65 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity p-2 text-center text-white text-[12px] font-semibold">Drinking coffee while working</div>
+      <div class="absolute bottom-0 w-full p-2 bg-black/20 text-white text-[11px] backdrop-blur-sm">Drinking coffee while working</div>
+    </div>
+
+    <div class="card hidden relative cursor-pointer aspect-square bg-[#9aadbb] rounded-lg overflow-hidden group" data-cat="random" data-caption="My friends sleeping">
+      <img src="images\random\IMG-20251123-WA0025.jpg" alt="My friends sleeping" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110">
+      <div class="absolute inset-0 bg-[#1a2f4a]/65 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity p-2 text-center text-white text-[12px] font-semibold">My friends sleeping</div>
+      <div class="absolute bottom-0 w-full p-2 bg-black/20 text-white text-[11px] backdrop-blur-sm">My friends sleeping</div>
+    </div>
+
+    <div class="card hidden relative cursor-pointer aspect-square bg-[#9aadbb] rounded-lg overflow-hidden group" data-cat="random" data-caption="Accompanying my friend to a repair shop">
+      <img src="images\random\IMG-20251031-WA0009.jpeg" alt="Accompanying my friend to a repair shop" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110">
+      <div class="absolute inset-0 bg-[#1a2f4a]/65 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity p-2 text-center text-white text-[12px] font-semibold">Accompanying my friend to a repair shop</div>
+      <div class="absolute bottom-0 w-full p-2 bg-black/20 text-white text-[11px] backdrop-blur-sm">Accompanying my friend to a repair shop</div>
+    </div>
+
+    <div class="card hidden relative cursor-pointer aspect-square bg-[#9aadbb] rounded-lg overflow-hidden group" data-cat="random" data-caption="Random pic I took while going back to Probolinggo">
+      <img src="images\random\IMG-20251221-WA0205.jpeg" alt="Random pic I took while going back to Probolinggo" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110">
+      <div class="absolute inset-0 bg-[#1a2f4a]/65 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity p-2 text-center text-white text-[12px] font-semibold">Random pic I took while going back to Probolinggo</div>
+      <div class="absolute bottom-0 w-full p-2 bg-black/20 text-white text-[11px] backdrop-blur-sm">Random pic I took while going back to Probolinggo</div>
+    </div>
+
+    <div class="card hidden relative cursor-pointer aspect-square bg-[#9aadbb] rounded-lg overflow-hidden group" data-cat="random" data-caption="My car under maintenance">
+      <img src="images\random\IMG20251101083241.jpg" alt="My car under maintenance" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110">
+      <div class="absolute inset-0 bg-[#1a2f4a]/65 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity p-2 text-center text-white text-[12px] font-semibold">My car under maintenance</div>
+      <div class="absolute bottom-0 w-full p-2 bg-black/20 text-white text-[11px] backdrop-blur-sm">My car under maintenance</div>
+    </div>
+
+    <div class="card hidden relative cursor-pointer aspect-square bg-[#9aadbb] rounded-lg overflow-hidden group" data-cat="random" data-caption="Drinking coffee while driving">
+      <img src="images\random\IMG20251017133829.jpg" alt="Drinking coffee while driving" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110">
+      <div class="absolute inset-0 bg-[#1a2f4a]/65 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity p-2 text-center text-white text-[12px] font-semibold">Drinking coffee while driving</div>
+      <div class="absolute bottom-0 w-full p-2 bg-black/20 text-white text-[11px] backdrop-blur-sm">Drinking coffee while driving</div>
+    </div>
+
+    <div class="card hidden relative cursor-pointer aspect-square bg-[#9aadbb] rounded-lg overflow-hidden group" data-cat="random" data-caption="Lambo">
+      <img src="images\random\IMG20260210102628.jpg" alt="Lambo" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110">
+      <div class="absolute inset-0 bg-[#1a2f4a]/65 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity p-2 text-center text-white text-[12px] font-semibold">Lambo</div>
+      <div class="absolute bottom-0 w-full p-2 bg-black/20 text-white text-[11px] backdrop-blur-sm">Lambo</div>
+    </div>
+
+    <div class="card hidden relative cursor-pointer aspect-square bg-[#9aadbb] rounded-lg overflow-hidden group" data-cat="random" data-caption="LD101">
+      <img src="images\random\1766334935148.jpg" alt="LD101" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110">
+      <div class="absolute inset-0 bg-[#1a2f4a]/65 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity p-2 text-center text-white text-[12px] font-semibold">LD101</div>
+      <div class="absolute bottom-0 w-full p-2 bg-black/20 text-white text-[11px] backdrop-blur-sm">LD101</div>
+    </div>
+
+    <div class="card hidden relative cursor-pointer aspect-square bg-[#9aadbb] rounded-lg overflow-hidden group" data-cat="mycat" data-caption="my cat">
+      <img src="images\cat\IMG20260127141645.jpg" alt="my cat" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110">
+      <div class="absolute inset-0 bg-[#1a2f4a]/65 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity p-2 text-center text-white text-[12px] font-semibold">my cat</div>
+      <div class="absolute bottom-0 w-full p-2 bg-black/20 text-white text-[11px] backdrop-blur-sm">my cat</div>
+    </div>
+
+    <div class="card hidden relative cursor-pointer aspect-square bg-[#9aadbb] rounded-lg overflow-hidden group" data-cat="mycat" data-caption="my cat">
+      <img src="images\cat\IMG20250120195325.jpg" alt="my cat" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110">
+      <div class="absolute inset-0 bg-[#1a2f4a]/65 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity p-2 text-center text-white text-[12px] font-semibold">my cat</div>
+      <div class="absolute bottom-0 w-full p-2 bg-black/20 text-white text-[11px] backdrop-blur-sm">my cat</div>
+    </div>
+
+    <div class="card hidden relative cursor-pointer aspect-square bg-[#9aadbb] rounded-lg overflow-hidden group" data-cat="mycat" data-caption="my cat">
+      <img src="images\cat\IMG20250120192206.jpg" alt="my cat" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110">
+      <div class="absolute inset-0 bg-[#1a2f4a]/65 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity p-2 text-center text-white text-[12px] font-semibold">my cat</div>
+      <div class="absolute bottom-0 w-full p-2 bg-black/20 text-white text-[11px] backdrop-blur-sm">my cat</div>
+    </div>
+
+    <div class="card hidden relative cursor-pointer aspect-square bg-[#9aadbb] rounded-lg overflow-hidden group" data-cat="mycat" data-caption="my cat">
+      <img src="images\cat\IMG20250105145725.jpg" alt="my cat" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110">
+      <div class="absolute inset-0 bg-[#1a2f4a]/65 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity p-2 text-center text-white text-[12px] font-semibold">my cat</div>
+      <div class="absolute bottom-0 w-full p-2 bg-black/20 text-white text-[11px] backdrop-blur-sm">my cat</div>
+    </div>
+
+    <div class="card hidden relative cursor-pointer aspect-square bg-[#9aadbb] rounded-lg overflow-hidden group" data-cat="mycat" data-caption="my cat">
+      <img src="images\cat\IMG20241029195216.jpg" alt="my cat" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110">
+      <div class="absolute inset-0 bg-[#1a2f4a]/65 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity p-2 text-center text-white text-[12px] font-semibold">my cat</div>
+      <div class="absolute bottom-0 w-full p-2 bg-black/20 text-white text-[11px] backdrop-blur-sm">my cat</div>
+    </div>
+
+    <div class="card hidden relative cursor-pointer aspect-square bg-[#9aadbb] rounded-lg overflow-hidden group" data-cat="mycat" data-caption="my cat">
+      <img src="images\cat\IMG20241008211403.jpg" alt="my cat" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110">
+      <div class="absolute inset-0 bg-[#1a2f4a]/65 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity p-2 text-center text-white text-[12px] font-semibold">my cat</div>
+      <div class="absolute bottom-0 w-full p-2 bg-black/20 text-white text-[11px] backdrop-blur-sm">my cat</div>
+    </div>
+
+    <div class="card hidden relative cursor-pointer aspect-square bg-[#9aadbb] rounded-lg overflow-hidden group" data-cat="mycat" data-caption="my cat">
+      <img src="images\cat\IMG20240125193023.jpg" alt="my cat" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110">
+      <div class="absolute inset-0 bg-[#1a2f4a]/65 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity p-2 text-center text-white text-[12px] font-semibold">my cat</div>
+      <div class="absolute bottom-0 w-full p-2 bg-black/20 text-white text-[11px] backdrop-blur-sm">my cat</div>
+    </div>
+
+    <div class="card hidden relative cursor-pointer aspect-square bg-[#9aadbb] rounded-lg overflow-hidden group" data-cat="mycat" data-caption="my cat">
+      <img src="images\cat\IMG-20251017-WA0048.jpeg" alt="my cat" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110">
+      <div class="absolute inset-0 bg-[#1a2f4a]/65 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity p-2 text-center text-white text-[12px] font-semibold">my cat</div>
+      <div class="absolute bottom-0 w-full p-2 bg-black/20 text-white text-[11px] backdrop-blur-sm">my cat</div>
+    </div>
+  </div>
+</div>
+
+<div class="lb hidden fixed inset-0 z-[1000] bg-black/92 items-center justify-center [&.open]:flex" id="lb">
+  <div class="relative flex flex-col items-center">
+    <button class="absolute top-[-18px] right-[-18px] w-9 h-9 rounded-full bg-white text-[#333] font-bold flex items-center justify-center" id="lbClose">✕</button>
+    <button class="absolute left-[-40px] md:left-[-60px] top-1/2 translate-y-[-70%] bg-white/20 text-white w-10 h-10 rounded-full hover:bg-white/40" id="lbPrev">‹</button>
+    <button class="absolute right-[-40px] md:right-[-60px] top-1/2 translate-y-[-70%] bg-white/20 text-white w-10 h-10 rounded-full hover:bg-white/40" id="lbNext">›</button>
+    <div class="w-[480px] h-[480px] max-w-[85vw] max-h-[70vh] rounded-[10px] overflow-hidden bg-[#6a8a9a] flex items-center justify-center text-[80px]" id="lbImg">🖼️</div>
+    <div class="text-white mt-[14px] text-[14px] opacity-85" id="lbCap"></div>
+  </div>
+</div>
+  <script src="main.js"></script>
+  <script src="gallery.js"></script>
+</body>
+</html>
